@@ -34,7 +34,7 @@ payments as (
 
         sum(amount) as lifetime_value
 
-    from {{ref("stg_stripe__payments")}}
+    from {{ref("stg_stripe__payment")}}
 
     group by customer_id
 

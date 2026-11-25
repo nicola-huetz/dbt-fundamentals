@@ -13,7 +13,7 @@ select * from {{ ref("stg_jaffle_shop__order")}}
 
 payments as (
 
-select * from {{ref("stg_stripe__payments")}}
+select * from {{ref("stg_stripe__payment")}}
 
 ),
 
