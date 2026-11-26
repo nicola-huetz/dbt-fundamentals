@@ -6,10 +6,20 @@ models:
           - unique
           - not_null
 
-  - name: stg_jaffle_shop__order
+  - name: stg_jaffle_shop__orders
     columns:
       - name: order_id
         data_tests:
           - unique
           - not_null
+      - name: order_status
+        data_tests:
+          - accepted_values:
+              arguments:  
+                values:
+                  - completed
+                  - shipped
+                  - returned
+                  - placed
+                  - return_pending
           
